@@ -1,7 +1,8 @@
 export default function Home() {
   return (
     <>
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative w-full py-28 md:py-40 overflow-hidden">
+
         <div
           className="absolute inset-0 bg-cover bg-center brightness-75"
           style={{
