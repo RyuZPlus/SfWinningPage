@@ -11,12 +11,10 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 border-b border-zinc-800 bg-[#0f0f14]/80 backdrop-blur-md">
       <nav className="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-        {/* Logo */}
         <h1 className="font-bold text-purple-500 text-lg">
           SFWONSOFT
         </h1>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex gap-2 text-sm items-center">
 
           <Link
@@ -63,7 +61,6 @@ export default function Navbar() {
 
         </div>
 
-        {/* Mobile Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1"
@@ -74,7 +71,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#111118] border-t border-zinc-800 px-6 py-6 space-y-4">
 
@@ -82,7 +78,6 @@ export default function Navbar() {
             Inicio
           </Link>
 
-          {/* Juegos dropdown móvil */}
           <div>
             <button
               onClick={() => setGamesOpen(!gamesOpen)}
