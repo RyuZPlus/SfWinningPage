@@ -25,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="border-b border-zinc-800">
+    <header className="fixed top-0 w-full z-50 border-b border-zinc-800 bg-[#0f0f14]/80 backdrop-blur-md">
       <nav className="max-w-6xl mx-auto flex justify-between p-4 items-center">
         <h1 className="font-bold text-purple-500">
           SFWONSOFT
@@ -49,7 +49,7 @@ export default function Navbar() {
             </button>
 
             {open && (
-              <div className="absolute left-0 mt-3 w-52 rounded-xl bg-[#1a1a22] border border-zinc-800 shadow-xl">
+              <div className="absolute left-0 mt-3 w-52 rounded-xl bg-[#1a1a22] border border-zinc-800 shadow-xl z-50">
                 <Link
                   href="/games/shooter"
                   className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400 transition"

@@ -19,6 +19,15 @@
   }
 }
 
+.vignette {
+  mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5) 70%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

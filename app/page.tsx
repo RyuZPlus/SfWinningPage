@@ -1,65 +1,71 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <section className="relative h-screen w-full overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-75"
+          style={{
+            backgroundImage: "url('/Banner.png')",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
+
+        <div className="relative z-10 flex h-full flex-col items-start justify-center text-left px-6">
+
+          <h1 className="text-6xl md:text-8xl font-extrabold text-purple-400 drop-shadow-lg">
+            PAPER PLANE: FREE FALL
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-4 text-xl md:text-2xl text-gray-200">
+            ¡Pon a prueba tus reflejos con esta aventura aérea!
+          </p>
+          <p className="mt-4 text-xl md:text-2xl text-gray-200 max-w-4xl">
+            Controla un avión de papel que desciende automáticamente por un mundo lleno de obstáculos. Muevete y adentrate entre los espacios para superar los peligros, y demuestra qué tan profundo puedes llegar sin chocar.
+          </p>
+          <p className="mt-4 text-xl md:text-2xl text-gray-200">
+            🌀 Características principales:
+          </p>
+          <ul className="mt-6 list-disc pl-6 text-lg text-gray-300 space-y-2 marker:text-purple-500 marker:text-xl">
+            <li>Jugabilidad sencilla pero desafiante</li>
+            <li>Controles intuitivos</li> 
+            <li>Obstáculos dinámicos y entornos cambiantes</li>
+            <li>Gráficos minimalistas y estilo relajante</li>
+            <li>Tabla de puntuaciones: ¡compite con tus amigos!</li>
+          </ul>
+          <p className="mt-4 text-xl md:text-2xl text-gray-200">
+            ¿Qué tan lejos puedes llegar antes de estrellarte?
+            🌟 ¡Descúbrelo y domina el arte del vuelo en caída libre!
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="projects" className="mt-24 max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-white text-center mb-8">
+          Proyectos Destacados
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-[#18181f] rounded-2xl border border-zinc-800 p-6 hover:border-purple-500 transition">
+            <img src="/games/shooter.png" alt="Shooter 2D" className="rounded-xl" />
+            <h3 className="text-2xl font-bold text-purple-400 mt-4">
+              Shooter 2D
+            </h3>
+            <p className="text-gray-300 mt-2">
+              Un shooter clásico con mecánicas modernas.
+            </p>
+          </div>
+
+          <div className="bg-[#18181f] rounded-2xl border border-zinc-800 p-6 hover:border-purple-500 transition">
+            <img src="/games/adventure.png" alt="Adventure" className="rounded-xl" />
+            <h3 className="text-2xl font-bold text-purple-400 mt-4">
+              Aventura Action
+            </h3>
+            <p className="text-gray-300 mt-2">
+              Explora mundos llenos de desafíos.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
