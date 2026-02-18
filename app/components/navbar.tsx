@@ -12,7 +12,9 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto flex justify-between items-center p-4">
 
         <h1 className="font-bold text-purple-500 text-lg">
-          SFWONSOFT
+          <Link href="/">
+            SFWONSOFT
+          </Link>
         </h1>
 
         <div className="hidden md:flex gap-2 text-sm items-center">
