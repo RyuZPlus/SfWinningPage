@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { games } from "@/lib/games"
+import Link from "next/link"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,12 +36,17 @@ export default function Navbar() {
             </button>
 
             <div className="absolute left-0 w-52 rounded-xl bg-[#1a1a22] border border-zinc-800 shadow-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all">
-              <Link href="/games/shooter" className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400">
-                Asteroid Command 9
-              </Link>
-              <Link href="/games/adventure" className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400">
-                Paper Plane: Free Fall
-              </Link>
+              
+              {games.map((game) => (
+                <Link
+                  key={game.slug}
+                  href={`/games/${game.slug}`}
+                  className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400"
+                >
+                  {game.title}
+                </Link>
+              ))}
+
             </div>
           </div>
 
