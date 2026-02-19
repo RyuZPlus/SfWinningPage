@@ -36,19 +36,16 @@ export default function Navbar() {
 
             <div className="absolute left-0 w-52 rounded-xl bg-[#1a1a22] border border-zinc-800 shadow-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all">
               <Link href="/games/shooter" className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400">
-                Shooter 2D
+                Asteroid Command 9
               </Link>
               <Link href="/games/adventure" className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400">
-                Action Adventure
-              </Link>
-              <Link href="/games/legacy" className="block px-4 py-2 hover:bg-purple-500/10 hover:text-purple-400">
-                Proyectos Legacy
+                Paper Plane: Free Fall
               </Link>
             </div>
           </div>
 
           <Link
-            href="/blog"
+            href="/news"
             className="px-3 py-2 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition"
           >
             Noticias

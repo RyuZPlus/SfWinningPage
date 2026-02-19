@@ -11,7 +11,7 @@ export default function AboutCTA() {
         href="/"
         className="inline-block bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-xl font-semibold transition"
       >
-        Ver Juegos
+        Ver Noticias
       </Link>
     </section>
   );
