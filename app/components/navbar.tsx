@@ -94,20 +94,24 @@ export default function Navbar() {
 
             {gamesOpen && (
               <div className="mt-3 ml-4 space-y-2 text-gray-400">
-                <Link href="/games/shooter" onClick={() => setMenuOpen(false)} className="block">
-                  Shooter 2D
-                </Link>
-                <Link href="/games/adventure" onClick={() => setMenuOpen(false)} className="block">
-                  Action Adventure
-                </Link>
-                <Link href="/games/legacy" onClick={() => setMenuOpen(false)} className="block">
-                  Proyectos Legacy
-                </Link>
+                {games.map((game) => (
+                  <Link
+                    key={game.slug}
+                    href={`/games/${game.slug}`}
+                    onClick={() => {
+                      setMenuOpen(false)
+                      setGamesOpen(false)
+                    }}
+                    className="block hover:text-purple-400 transition"
+                  >
+                    {game.title}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
 
-          <Link href="/blog" onClick={() => setMenuOpen(false)} className="block text-lg">
+          <Link href="/news" onClick={() => setMenuOpen(false)} className="block text-lg">
             Noticias
           </Link>
 

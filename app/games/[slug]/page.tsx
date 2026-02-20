@@ -17,6 +17,10 @@ export default async function GamePage({ params }: {params: Promise<{slug: strin
       <p className="mt-4 text-zinc-400">
         {game.description}
       </p>
+
+      <p className="mt-4 text-zinc-400">
+        {game.platform.join(" • ")}
+      </p>
     </section>
   )
 }

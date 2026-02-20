@@ -8,10 +8,10 @@ export default function AboutCTA() {
       </h2>
 
       <Link
-        href="/"
+        href="/games"
         className="inline-block bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-xl font-semibold transition"
       >
-        Ver Noticias
+        Ver Juegos
       </Link>
     </section>
   );
