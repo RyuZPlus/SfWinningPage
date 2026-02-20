@@ -6,8 +6,10 @@ export interface Game {
   genre: string
   platform: string[]
   coverImage: string
+  coverBanner: string
   screenshots: string[]
   features: string[]
+  status: string
 }
 
 export const games = [
@@ -19,7 +21,9 @@ export const games = [
       "Un shoot’em up 2D con rutas alternativas y progresión dinámica.",
     genre: "Shoot'em up",
     platform: ["Android", "Steam"],
-    cover: "/games/LastNewIcon.png",
+    coverImage: "/games/LastNewIcon.png",
+    coverBanner: "/AC9Banner.png",
+    status: "Próximamente en:"
   },
   {
     slug: "paper-plane-free-fall",
@@ -29,6 +33,8 @@ export const games = [
       "Controla un avión de papel descendiendo entre obstáculos dinámicos con sistema de puntuación progresiva.",
     genre: "Arcade",
     platform: ["Android"],
-    cover: "/games/SecondLastNew.png",
+    coverImage: "/games/SecondLastNew.png",
+    coverBanner: "/Banner.png",
+    status: "Disponible en:",
   },
 ]

@@ -15,7 +15,7 @@ export default function Games() {
                 className="md:col-span-1 bg-[#18181f] rounded-2xl border border-zinc-800 p-6 hover:border-purple-500 transition block"
             >
                 <img
-                src={game.cover}
+                src={game.coverImage}
                 alt={game.title}
                 className="rounded-xl w-full h-48 object-cover"
                 />
