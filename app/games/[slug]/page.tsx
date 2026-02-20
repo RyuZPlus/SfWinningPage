@@ -8,6 +8,17 @@ export default async function GamePage({ params }: {params: Promise<{slug: strin
 
   if (!game) return notFound()
 
+const getPlatformIcon = (platform: string) => {
+  switch (platform) {
+    case "Steam":
+      return "/icons/steam.svg"
+    case "Android":
+      return "/icons/android.svg"
+    default:
+      return null
+  }
+}
+
   return (
     <div className="text-white">
       <section className="relative h-[80vh] w-full items-center max-w-6xl mx-auto px-6 py-20">
@@ -25,13 +36,51 @@ export default async function GamePage({ params }: {params: Promise<{slug: strin
             {game.title}
           </h1>
 
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 text-zinc-400 py-6">
             {game.description}
           </p>
 
-          <p className="mt-4 text-zinc-400">
-            {game.platform.join(" • ")}
-          </p>
+          <div className="mt-8 flex flex-wrap gap-6">
+            {game.platforms.map((platform) => {
+              const icon = getPlatformIcon(platform.name)
+
+              return (
+                <a
+                  key={platform.name}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="items-center justify-center gap-5
+           min-w-[180px]
+           px-8 py-5
+           border border-white/40
+           rounded-xl
+           bg-white/5
+           backdrop-blur-sm
+           font-medium
+           text-white
+           transition-all duration-300
+           hover:bg-purple-600
+           hover:border-purple-500
+           hover:shadow-purple-500/40
+           hover:shadow-xl
+           hover:-translate-y-1"
+                >
+                  
+                  {icon && (
+                    <img
+                      src={icon}
+                      alt={platform.name}
+                      className="w-10 h-10 object-contain"
+                    />
+                  )}
+                  <span className="text-zinc-100 text-sm">
+                    {platform.name}
+                  </span>
+                </a>
+              )
+            })}
+          </div>
         </div>
       </section>
       <section className="max-w-6xl mx-auto px-6 py-20">
