@@ -40,6 +40,10 @@ const getPlatformIcon = (platform: string) => {
             {game.description}
           </p>
 
+          <p className="mt-4 py-6 text-white text-2xl font-extrabold">
+            {game.status}
+          </p>
+
           <div className="mt-8 flex flex-wrap gap-6">
             {game.platforms.map((platform) => {
               const icon = getPlatformIcon(platform.name)
@@ -89,7 +93,12 @@ const getPlatformIcon = (platform: string) => {
         </h2>
 
         <p className="text-zinc-400 leading-relaxed">
-          {game.description}
+          {game.longDescription.split(/\r?\n/).map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
         </p>
       </section>
     </div>
