@@ -54,7 +54,7 @@ export const games = [
 🎯 Tabla de puntuaciones: ¡compite con tus amigos!`,
     genre: "Arcade",
     platforms: [
-      { name: "Android", url: "https://play.google.com/store/apps/details?id=XXXXX" }
+      { name: "Android", url: "https://play.google.com/store/apps/details?id=com.SFWONSOFT.PaperPlaneFreeFall" }
     ],
     coverImage: "/games/SecondLastNew.png",
     coverBanner: "/Banner.png",
