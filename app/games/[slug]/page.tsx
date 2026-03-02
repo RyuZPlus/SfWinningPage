@@ -27,7 +27,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="text-white">
-      <section className="relative h-[50vh] w-full max-w-6xl mx-auto px-6 py-20">
+      <section className="relative h-[50vh] w-full max-w-6xl mx-auto h-[60vh] min-h-[500px] px-6 py-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${game.coverBanner})` }}
