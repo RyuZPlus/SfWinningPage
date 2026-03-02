@@ -42,16 +42,16 @@ export const games = [
     description: "Juego móvil arcade",
     longDescription: `Controla un avión de papel descendiendo entre obstáculos dinámicos con sistema de puntuación progresiva.
 
-🌀 Características principales:
+      Características principales:
 
-• Jugabilidad sencilla pero desafiante
-• Controles intuitivos
-• Obstáculos dinámicos y entornos cambiantes
-• Gráficos minimalistas y estilo relajante
+      • Jugabilidad sencilla pero desafiante
+      • Controles intuitivos
+      • Obstáculos dinámicos y entornos cambiantes
+      • Gráficos minimalistas y estilo relajante
 
-🏆 ¡Desbloquea logros con Google Play Games!
+      ¡Desbloquea logros con Google Play Games!
 
-🎯 Tabla de puntuaciones: ¡compite con tus amigos!`,
+      Tabla de puntuaciones: ¡compite con tus amigos!`,
     genre: "Arcade",
     platforms: [
       { name: "Android", url: "https://play.google.com/store/apps/details?id=com.SFWONSOFT.PaperPlaneFreeFall" }
