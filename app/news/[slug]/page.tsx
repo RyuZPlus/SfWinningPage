@@ -8,14 +8,14 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function NewsPage({ params }: {params: Promise<{slug: string}>}) {
+export default async function NewsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const new_ = news.find(g => g.slug === slug)
   if (!new_) return notFound()
 
   return (
     <div className="text-white">
-      <section className="relative h-[80vh] w-full items-center max-w-6xl mx-auto px-6 py-20">
+      <section className="relative min-h-[80vh] w-full items-center max-w-6xl mx-auto px-6 py-20">
         <h1 className="text-4xl md:text-5xl font-bold mb-10 text-white text-center">
           {new_.title}
         </h1>

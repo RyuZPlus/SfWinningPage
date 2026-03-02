@@ -7,27 +7,27 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function GamePage({ params }: {params: Promise<{slug: string}>}) {
+export default async function GamePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
 
   const game = games.find(g => g.slug === slug)
 
   if (!game) return notFound()
 
-const getPlatformIcon = (platform: string) => {
-  switch (platform) {
-    case "Steam":
-      return "/icons/steam.svg"
-    case "Android":
-      return "/icons/android.svg"
-    default:
-      return null
+  const getPlatformIcon = (platform: string) => {
+    switch (platform) {
+      case "Steam":
+        return "/icons/steam.svg"
+      case "Android":
+        return "/icons/android.svg"
+      default:
+        return null
+    }
   }
-}
 
   return (
     <div className="text-white">
-      <section className="relative h-[80vh] w-full items-center max-w-6xl mx-auto px-6 py-20">
+      <section className="relative h-[50vh] w-full max-w-6xl mx-auto px-6 py-20">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${game.coverBanner})` }}
@@ -36,7 +36,7 @@ const getPlatformIcon = (platform: string) => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f14] via-transparent to-transparent" />
-        
+
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <h1 className="text-4xl font-bold text-white">
             {game.title}
@@ -60,7 +60,7 @@ const getPlatformIcon = (platform: string) => {
                   href={platform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="items-center justify-center gap-5
+                  className="flex items-center justify-center gap-5
            min-w-[180px]
            px-8 py-5
            border border-white/40
@@ -76,7 +76,7 @@ const getPlatformIcon = (platform: string) => {
            hover:shadow-xl
            hover:-translate-y-1"
                 >
-                  
+
                   {icon && (
                     <img
                       src={icon}
