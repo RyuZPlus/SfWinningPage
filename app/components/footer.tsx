@@ -11,7 +11,7 @@ export default function Footer() {
 
         <div className="flex gap-6">
           <Link
-            href="/privacy"
+            href="/privacy-policy"
             className="hover:text-purple-400 transition"
           >
             Aviso de Privacidad
