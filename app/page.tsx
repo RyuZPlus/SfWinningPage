@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { news } from "@/lib/news"
+
 export default function Home() {
   return (
     <>
@@ -46,32 +49,41 @@ export default function Home() {
           Noticias
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2 bg-[#18181f] rounded-2xl border border-zinc-800 p-6 hover:border-purple-500 transition flex flex-col md:flex-row gap-6 items-center">
-            <img 
-              src="/games/LastNewIcon.png" 
-              alt="LastNew" 
-              className="rounded-xl w-full md:w-1/2 h-64 object-cover"
+          {news.map((post, index) => (
+          <Link
+            key={post.slug}
+            href={`/news/${post.slug}`}
+            className={`${
+              index === 0
+                ? "md:col-span-2 flex flex-col md:flex-row gap-6 items-center"
+                : "md:col-span-1 block"
+            } bg-[#18181f] rounded-2xl border border-zinc-800 p-6 hover:border-purple-500 transition`}
+          >
+            <img
+              src={post.coverImage}
+              alt={post.title}
+              className={`rounded-xl object-cover ${
+                index === 0
+                  ? "w-full md:w-1/2 h-64"
+                  : "w-full h-48"
+              }`}
             />
 
-            <div className="md:w-1/1">
-              <h3 className="text-3xl font-bold text-purple-400">
-                Próximamente
+            <div>
+              <h3 className={`font-bold text-purple-400 ${
+                index === 0 ? "text-3xl" : "text-2xl mt-4"
+              }`}>
+                {post.title}
               </h3>
-              <p className="text-gray-300 mt-3 text-lg">
-                Enterate del nuevo juego en desarrollo de SFWONSOFT...
+
+              <p className={`text-gray-300 ${
+                index === 0 ? "mt-3 text-lg" : "mt-2"
+              }`}>
+                {post.description}
               </p>
             </div>
-          </div>
-
-          <div className="md:col-span-1 bg-[#18181f] rounded-2xl border border-zinc-800 p-6 hover:border-purple-500 transition">
-            <img src="/games/SecondLastNew.png" alt="SecondLastNew" className="rounded-xl w-full h-48 object-cover" />
-            <h3 className="text-2xl font-bold text-purple-400 mt-4">
-              Primer juego
-            </h3>
-            <p className="text-gray-300 mt-2">
-              Demuestra qué tan profundo puedes llegar...
-            </p>
-          </div>
+          </Link>
+        ))}
         </div>
       </section>
     </>
