@@ -2,6 +2,12 @@ import { news } from "@/lib/news"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 
+export function generateStaticParams() {
+  return news.map((new_) => ({
+    slug: new_.slug,
+  }));
+}
+
 export default async function NewsPage({ params }: {params: Promise<{slug: string}>}) {
   const { slug } = await params
   const new_ = news.find(g => g.slug === slug)

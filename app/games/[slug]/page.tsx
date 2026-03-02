@@ -1,6 +1,12 @@
 import { games } from "@/lib/games"
 import { notFound } from "next/navigation"
 
+export function generateStaticParams() {
+  return games.map((game) => ({
+    slug: game.slug,
+  }));
+}
+
 export default async function GamePage({ params }: {params: Promise<{slug: string}>}) {
   const { slug } = await params
 
