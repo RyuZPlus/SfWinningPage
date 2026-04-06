@@ -1,20 +1,18 @@
 export default function AboutSection() {
   return (
     <section className="py-16 px-6 max-w-4xl mx-auto space-y-8 text-gray-300">
-      <h2 className="text-3xl font-bold text-white">Sobre mí</h2>
+      <h2 className="text-3xl font-bold text-white">Quiénes somos</h2>
 
       <p>
-        Soy desarrollador independiente especializado en juegos 2D creados con Unity y C#. 
-        Construyo soluciones eficientes y experiencias interactivas utilizando principios sólidos de ingeniería de software y
-        me enfoco en diseñar sistemas donde la dificultad evoluciona de forma progresiva.
+        En SFWonSoft desarrollamos soluciones de software enfocadas en aplicaciones web y desarrollo de videojuegos.
       </p>
 
       <p>
-        Mi objetivo es crear juegos accesibles pero profundos, donde cada mecánica tenga propósito
-        y cada partida invite a intentarlo una vez más.
+        El proyecto es liderado por un desarrollador full-stack con experiencia en back-end para entornos profesionales, 
+        y desarrollo de videojuegos como área de exploración técnica y creativa.
       </p>
 
-      <h2 className="text-3xl font-bold text-white mt-12">Mi Enfoque</h2>
+      <h2 className="text-3xl font-bold text-white mt-12">Nuestro enfoque</h2>
 
       <ul className="space-y-6">
 
@@ -23,8 +21,8 @@ export default function AboutSection() {
             Ingeniería orientada a la experiencia interactiva
             </h3>
             <p className="text-gray-400">
-            Desarrollo sistemas donde la arquitectura del código respalda directamente
-            la experiencia del usuario o jugador, priorizando modularidad y claridad.
+            Se centra en crear sistemas eficientes, escalables y experiencias interactivas de calidad,
+            combinando tecnologías modernas con buenas prácticas de desarrollo.
             </p>
         </li>
 
@@ -35,6 +33,7 @@ export default function AboutSection() {
             <p className="text-gray-400">
             Implemento comportamientos adaptativos basados en progresión,
             aplicando principios sólidos de programación orientada a objetos.
+            Además, compartimos conocimiento a través de artículos y contenido técnico orientado a desarrolladores.
             </p>
         </li>
 
@@ -43,7 +42,7 @@ export default function AboutSection() {
             Optimización y rendimiento
             </h3>
             <p className="text-gray-400">
-            Diseño soluciones eficientes enfocadas en estabilidad y fluidez,
+            Diseñamos soluciones eficientes enfocadas en estabilidad y fluidez,
             especialmente en entornos móviles.
             </p>
         </li>
