@@ -21,7 +21,7 @@ export default function Footer() {
             href="/about"
             className="hover:text-purple-400 transition"
           >
-            Sobre mí
+            Quiénes somos
           </Link>
         </div>
 
