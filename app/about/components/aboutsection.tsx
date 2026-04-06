@@ -32,7 +32,7 @@ export default function AboutSection() {
             Sistemas dinámicos y escalables
             </h3>
             <p className="text-gray-400">
-            Implemento comportamientos adaptativos basados en progresión,
+            Implementamos comportamientos adaptativos basados en progresión,
             aplicando principios sólidos de programación orientada a objetos.
             Además, compartimos conocimiento a través de artículos y contenido técnico orientado a desarrolladores.
             </p>
