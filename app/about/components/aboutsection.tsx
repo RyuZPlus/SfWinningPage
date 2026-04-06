@@ -4,11 +4,12 @@ export default function AboutSection() {
       <h2 className="text-3xl font-bold text-white">Quiénes somos</h2>
 
       <p>
-        En SFWonSoft desarrollamos soluciones de software enfocadas en aplicaciones web y desarrollo de videojuegos.
+        En SFWONSOFT desarrollamos videojuegos combinando programación y diseño interactivo, 
+        explorando nuevas mecánicas y experiencias centradas en el jugador, con especial atención al rendimiento y la escalabilidad.
       </p>
 
       <p>
-        El proyecto es liderado por un desarrollador full-stack con experiencia en back-end para entornos profesionales, 
+        El proyecto es liderado por un desarrollador full-stack para entornos profesionales, 
         y desarrollo de videojuegos como área de exploración técnica y creativa.
       </p>
 
