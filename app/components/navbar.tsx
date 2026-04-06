@@ -61,7 +61,7 @@ export default function Navbar() {
             href="/about"
             className="px-3 py-2 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition"
           >
-            Sobre mí
+            Quiénes somos
           </Link>
 
         </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
           </Link>
 
           <Link href="/about" onClick={() => setMenuOpen(false)} className="block text-lg">
-            Sobre mí
+            Quiénes somos
           </Link>
 
         </div>
