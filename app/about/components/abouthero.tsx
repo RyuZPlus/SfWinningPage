@@ -17,7 +17,7 @@ export default function AboutHero() {
         SFWONSOFT
       </h1>
       <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-        Desarrollador software | Especializado en videojuegos indie 2D
+        Desarrollo de videojuegos 2D que combinan creatividad y tecnología
       </p>
     </section>
   );
