@@ -28,7 +28,7 @@ export default function Home() {
             Controla un avión de papel que desciende automáticamente por un mundo lleno de obstáculos. Muevete y adentrate entre los espacios para superar los peligros, y demuestra qué tan profundo puedes llegar sin chocar.
           </p>
           <p className="mt-4 text-xl md:text-2xl text-gray-200">
-            🌀 Características principales:
+            Características principales:
           </p>
           <ul className="mt-6 list-disc pl-6 text-lg text-gray-300 space-y-2 marker:text-purple-500 marker:text-xl">
             <li>Jugabilidad sencilla pero desafiante</li>
@@ -39,7 +39,7 @@ export default function Home() {
           </ul>
           <p className="mt-4 text-xl md:text-2xl text-gray-200">
             ¿Qué tan lejos puedes llegar antes de estrellarte?
-            🌟 ¡Descúbrelo y domina el arte del vuelo en caída libre!
+            ¡Descúbrelo y domina el arte del vuelo en caída libre!
           </p>
         </div>
       </section>
